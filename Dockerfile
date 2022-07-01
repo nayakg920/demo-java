@@ -6,7 +6,7 @@ MAINTAINER Tung Nguyen <tongueroo@gmail.com>
 # RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
 # RUN apt-get -o Acquire::Max-FutureTime=86400 update
 # RUN  timedatectl set-ntp off && timedatectl set-ntp on
-RUN apt-get update && \
+# RUN apt-get update && \
   apt-get install -y \
     tree \
     vim && \
