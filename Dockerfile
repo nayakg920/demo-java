@@ -3,7 +3,8 @@ MAINTAINER Tung Nguyen <tongueroo@gmail.com>
 
 # Debugging tools: A few ways to handle debugging tools.
 # Trade off is a slightly more complex volume mount vs keeping the image size down.
-RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
+# RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
+RUN apt-get -o Acquire::Max-FutureTime=86400 update
 RUN apt-get update && \
   apt-get install -y \
     net-tools \
