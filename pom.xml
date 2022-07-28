@@ -28,16 +28,21 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
       </plugin>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.9.1.2184</version>
+      </plugin>
     </plugins>
   </build>
   <distributionManagement>
    <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://172.42.42.20:8081/repository/maven-snapshots</url>
+      <url>http://172.42.42.10:8081/repository/maven-snapshots</url>
    </snapshotRepository>
    <repository>
       <id>nexus-releases</id>
-      <url>http://172.42.42.20:8081/repository/maven-releases</url>
+      <url>http://172.42.42.10:8081/repository/maven-releases</url>
    </repository>
   </distributionManagement>
   <dependencies>
