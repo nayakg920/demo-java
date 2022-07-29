@@ -6,6 +6,7 @@ kind: Secret
 metadata:
   creationTimestamp: null
   name: regcred
+type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: apps/v1
 kind: Deployment
