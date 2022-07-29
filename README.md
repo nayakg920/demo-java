@@ -88,3 +88,16 @@ The original command was:
 
 * docker: `brew install docker`
 * maven: `brew install maven`
+############################################################
+Note:- After checking push and pull image from the docker private registry create a secret yaml file using below steps:-
+# kubectl create secret generic regcred     --from-file=.dockerconfigjson=/root/.docker/config.json  --type=kubernetes.io/dockerconfigjson --dry-run=client -o yaml > secret.yml
+
+# cat secret.yml
+apiVersion: v1
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRoIjogIloyOXdZV0poYm1Sb2RURXlNenBDWVdSaWIzbEFNakF5TWc9PSIKCQl9Cgl9Cn0=
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: regcred
+type: kubernetes.io/dockerconfigjson
