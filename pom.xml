@@ -27,15 +27,15 @@
         <groupId>org.sonarsource.scanner.maven</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
+      <configuration>
+          <!-- SonarQube Server URL -->
+          <sonar.host.url>http://172.16.16.101:9000</sonar.host.url>
+
+         <!-- SonarQube Authentication Token -->
+         <sonar.login>squ_d219b28dc5a674a6668d736dad16548ee533c284</sonar.login>
+      </configuration>
       </plugin>
     </plugins>
-    <properties>
-      <!-- SonarQube Server URL -->
-  <sonar.host.url>http://172.16.16.101:9000</sonar.host.url>
-
-  <!-- SonarQube Authentication Token -->
-  <sonar.login>squ_d219b28dc5a674a6668d736dad16548ee533c284</sonar.login>
-    </properties>
   </build>
   <distributionManagement>
    <snapshotRepository>
