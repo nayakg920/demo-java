@@ -28,12 +28,6 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.9.1.2184</version>
       </plugin>
-      <configuration>
-          <!-- SonarQube Server URL -->
-          <sonar.host.url>http://172.16.16.101:9000</sonar.host.url>
-
-         <!-- SonarQube Authentication Token -->
-         <sonar.login>squ_d219b28dc5a674a6668d736dad16548ee533c284</sonar.login>
       </configuration>
     </plugins>
   </build>
@@ -65,4 +59,19 @@
         <version>3.1.0</version>
     </dependency>
   </dependencies>
+  <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>ture</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://172.16.16.101:9000 -->
+                <sonar.host.url>
+                  http://172.16.16.101:9000
+                </sonar.host.url>
+              <!-- SonarQube Authentication Token -->
+             <sonar.login>squ_d219b28dc5a674a6668d736dad16548ee533c284</sonar.login>
+            </properties>
+       </profile>
+      </profiles>
 </project>
