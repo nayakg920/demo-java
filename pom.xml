@@ -71,6 +71,8 @@
                 </sonar.host.url>
               <!-- SonarQube Authentication Token -->
              <sonar.login>squ_d219b28dc5a674a6668d736dad16548ee533c284</sonar.login>
+              <sonar.jdbc.username>admin</sonar.jdbc.username>
+              <sonar.jdbc.password>admin@123</sonar.jdbc.password>
             </properties>
        </profile>
       </profiles>
