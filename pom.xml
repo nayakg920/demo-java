@@ -27,10 +27,20 @@
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>               
         <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.9.0.2155</version>
+        <version>3.9.1.2184</version>
       </plugin>	    
     </plugins>
   </build>
+  <distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://172.16.16.101:8081/repository/maven-snapshots</url>
+   </snapshotRepository>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://172.16.16.101:8081/repository/maven-releases</url>
+   </repository>
+</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
