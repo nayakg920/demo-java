@@ -31,10 +31,6 @@
       </plugin>	    
     </plugins>
   </build>
-  <properties>
-        <sonar.host.url>http://172.16.16.101:9000</sonar.host.url>
-        <sonar.login>squ_39c67d0c0f109d0f62f24a20586f6d0f5b32425a</sonar.login>
-    </properties>
   <distributionManagement>
    <snapshotRepository>
       <id>nexus-snapshots</id>
